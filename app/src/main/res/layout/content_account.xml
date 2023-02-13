@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+          <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Emmy"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:padding="3dp"
+                        android:rotation="90"
+                        android:src="@drawable/ic_sron">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="20dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_menu">
+
+                </ImageView>
+            </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <com.google.android.material.tabs.TabLayout xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            app:tabIconTint="@color/tab_select_color"
+            app:tabIndicator="@drawable/tab_indicator"
+            app:tabIndicatorHeight="3dp"
+            android:layout_height="wrap_content"
+            android.support.design:tabBackground="@android:color/transparent"
+            android.support.design:tabIndicatorColor="@android:color/black"
+            android.support.design:tabMode="fixed" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
