@@ -3,37 +3,57 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/bg_edittext.xml" value="0.212" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/bottom_indicator.xml" value="0.212" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/child_selector.xml" value="0.295" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/child_selector_account.xml" value="0.295" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/child_selector_home.xml" value="0.295" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/child_selector_noti.xml" value="0.295" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/f.xml" value="0.295" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/ic_addfriend_background.xml" value="0.212" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/ic_edit.xml" value="0.196" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/icon_color_selector.xml" value="0.1935" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/item_bg.xml" value="0.3675" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/item_bg_btn_following.xml" value="0.212" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/item_editext.xml" value="0.3675" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/rounded_dialog.xml" value="0.212" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/splash.xml" value="0.1935" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/tab_indicator.xml" value="0.3675" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/tab_select_color.xml" value="0.196" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/drawable/text_color_selector.xml" value="0.295" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/account_frag.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/activity_main.xml" value="0.5041705282669138" />
-        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/content_account.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/bottom_account.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/bottom_post.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/content_account.xml" value="0.29717180244829045" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/content_post.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/content_profile.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/content_scrolling.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/home_frag.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/content_showall_post_activity.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/home_frag.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/home_friend.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/home_recommend.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/like_frag.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/list_item_image.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/list_item_post.xml" value="0.29717180244829045" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/list_item_searchuser.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/login.xml" value="0.35280797101449274" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/login_mstory_activity.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/noti_frag.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/post_activity.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/post_frag.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/search_frag.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/search_activity.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/search_frag.xml" value="0.29717180244829045" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/showall_post.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/showall_post_activity.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/tablayout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/tablayout_account.xml" value="0.317481884057971" />
+        <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/layout/tv_spiner.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Kiyu/Mstory/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

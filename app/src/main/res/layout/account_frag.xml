@@ -4,28 +4,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@color/colorPrimary"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
     <LinearLayout android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <RelativeLayout android:layout_marginTop="10dp"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp">
+            android:layout_height="230dp">
 
             <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:cardview="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 app:cardBackgroundColor="#EEEEEE"
                 app:cardElevation="0dp"
-                cardview:cardCornerRadius="12dp">
+                cardview:cardCornerRadius="0dp">
                 <ImageView android:id="@+id/image_profile"
+                    android:background="#EEEEEE"
                     android:scaleType="centerCrop"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="2dp"/>
+                    android:layout_height="match_parent" />
             </androidx.cardview.widget.CardView>
 
             <RelativeLayout
@@ -41,31 +39,49 @@
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:gravity="center"
-                    android:src="@drawable/ic_google"
+                    android:src="@drawable/profile_null"
                     app:civ_border_color="@color/colorPrimary"
                     app:civ_border_width="5dp" />
 
             </RelativeLayout>
         </RelativeLayout>
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="-"
-            android:textColor="@android:color/black"
-            android:textSize="18dp" />
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/username"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="18dp" >
+            </TextView>
+            <ImageView
+                android:id="@+id/verified"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:padding="2dp"
+                android:src="@drawable/verified"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+
+            </ImageView>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:weightSum="3"
             android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/post"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -73,15 +89,20 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/value_post"
+                    android:clickable="false"
+                    android:focusable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="100"
+                    android:text="0"
                     android:textColor="@android:color/black"
                     android:textSize="18dp" />
 
                 <TextView
+                    android:clickable="false"
+                    android:focusable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
@@ -91,6 +112,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/following"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -98,15 +120,20 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/value_following"
+                    android:clickable="false"
+                    android:focusable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="567"
+                    android:text="0"
                     android:textColor="@android:color/black"
                     android:textSize="18dp" />
 
                 <TextView
+                    android:clickable="false"
+                    android:focusable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
@@ -116,6 +143,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/follower"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -123,15 +151,21 @@
                 android:orientation="vertical">
 
                 <TextView
+
+                    android:id="@+id/value_follow"
+                    android:clickable="false"
+                    android:focusable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="1.5M"
+                    android:text="0"
                     android:textColor="@android:color/black"
                     android:textSize="18dp" />
 
                 <TextView
+                    android:clickable="false"
+                    android:focusable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
@@ -150,31 +184,94 @@
             android:layout_marginRight="30dp"
             android:orientation="horizontal">
 
-            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:cardview="http://schemas.android.com/apk/res-auto"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="5"
-                app:cardBackgroundColor="#EEEEEE"
-                app:cardElevation="0dp"
-                cardview:cardCornerRadius="7dp">
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/btn_follow"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="40dp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardElevation="0dp"
+                    cardview:cardCornerRadius="7dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="?android:attr/selectableItemBackground">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:gravity="center">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:text="แก้ไขโปรไฟล์"
-                        android:textColor="@android:color/black"
-                        android:textSize="17dp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="ติดตาม"
+                        android:textColor="@android:color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold"></TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/btn_following"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="40dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    cardview:cardCornerRadius="7dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#EEEEEE">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="กำลังติดตาม"
+                            android:textColor="@android:color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold"></TextView>
+                    </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/btn_editprofile"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    app:cardBackgroundColor="#EEEEEE"
+                    app:cardElevation="0dp"
+                    cardview:cardCornerRadius="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="แก้ไขโปรไฟล์"
+                            android:textColor="@android:color/black"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
 
             <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:cardview="http://schemas.android.com/apk/res-auto"
@@ -201,11 +298,12 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/bio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_marginTop="20dp"
-            android:text="อิๆ"
+            android:text="-"
             android:textColor="@android:color/black"
             android:textSize="15dp" />
 
@@ -217,14 +315,19 @@
             app:tabIndicator="@drawable/tab_indicator"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            app:layout_collapseMode="pin"
             android.support.design:tabBackground="@android:color/transparent"
             android.support.design:tabMode="fixed" />
+        <View android:layout_above="@+id/tablayout"
+            android:background="#A6A5A5"
+            android:layout_width="match_parent"
+            android:layout_height="0.1sp">
 
-        <androidx.viewpager.widget.ViewPager
+        </View>
+        <com.mstudio.android.mstory.app.HeightWrappingViewPager
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="700dp" />
-
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </RelativeLayout>

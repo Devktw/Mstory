@@ -3,235 +3,157 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
         android:gravity="center|top"
         android:orientation="vertical"
         android:padding="15sp">
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@mipmap/ic_launcher"></ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="เข้าสู่ระบบ Mstory"
-            android:textSize="22dp"
-            android:textStyle="bold"></TextView>
+            android:layout_marginTop="50dp"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="15sp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="เข้าสู่ระบบ Mstory และเพลินเพลินไปกับเรื่องราวมากมายที่รอคุณอยู่"
-            android:textSize="17dp"></TextView>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_mstory_round"></ImageView>
 
-        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:cardview="http://schemas.android.com/apk/res-auto"
-            android:layout_width="300sp"
-            android:id="@+id/btn_google"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="#e84e40"
-            app:cardElevation="0dp"
-            cardview:cardCornerRadius="90dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="เข้าสู่ระบบ Mstory"
+                android:textSize="22dp"
+                android:textStyle="bold"></TextView>
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="เข้าสู่ระบบ Mstory และเพลินเพลินไปกับเรื่องราวมากมายที่รอคุณอยู่"
+                android:textSize="17dp"></TextView>
+            <EditText
+                android:id="@+id/edittext_username"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/bg_edittext"
+                android:layout_marginTop="20dp"
+                android:hint="ตั้งชื่อ"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:orientation="vertical">
+                android:layout_height="50dp">
 
-                <RelativeLayout
+            </EditText>
+            <EditText
+                android:id="@+id/edittext_email"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/bg_edittext"
+                android:layout_marginTop="10dp"
+                android:hint="ตั้งอีเมล"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            </EditText>
+            <EditText
+                android:id="@+id/edittext_password"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:inputType="textPassword"
+                android:background="@drawable/bg_edittext"
+                android:hint="ตั้งรหัสผ่าน"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            </EditText>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_register_mstory"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#0091D4"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="90dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_centerInParent="true"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
-
-                        android:layout_width="35dp"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:layout_height="35dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerInParent="true"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        app:cardBackgroundColor="#FFFFFF"
-                        app:cardElevation="0dp"
-                        cardview:cardCornerRadius="90dp">
-
-                        <ImageView
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:padding="5dp"
-                            android:src="@drawable/ic_google" />
-                    </androidx.cardview.widget.CardView>
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="vertical">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:gravity="center"
-                            android:text="เข้าสู่ระบบด้วย Google"
-                            android:textColor="#FFFFFF"
-                            android:textSize="17dp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
-
-
-                </RelativeLayout>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:cardview="http://schemas.android.com/apk/res-auto"
-            android:layout_width="300sp"
-            android:layout_height="50dp"
-            android:focusable="true"
-            android:clickable="true"
-            android:layout_marginTop="15dp"
-            app:cardBackgroundColor="#0288d1"
-            app:cardElevation="0dp"
-            cardview:cardCornerRadius="90dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerInParent="true"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_alignParentStart="true"
                         android:layout_centerInParent="true"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        app:cardBackgroundColor="#FFFFFF"
-                        app:cardElevation="0dp"
-                        cardview:cardCornerRadius="90dp">
+                        android:orientation="horizontal">
 
-                        <ImageView
+                        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
                             android:layout_gravity="center"
-                            android:padding="5dp"
-                            android:src="@drawable/ic_facebook" />
-                    </androidx.cardview.widget.CardView>
+                            android:layout_marginLeft="15dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="90dp">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardElevation="0dp"
+                                app:cardCornerRadius="90dp">
 
-                            android:gravity="center"
-                            android:text="เข้าสู่ระบบด้วย Facebook"
-                            android:textColor="#FFFFFF"
-                            android:textSize="17dp"
-                            android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="center"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_mstory_round" />
+                            </androidx.cardview.widget.CardView>
+                        </androidx.cardview.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="สมัครบัญชี Mstory"
+                                android:textColor="#FFFFFF"
+                                android:textSize="17dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+
                     </RelativeLayout>
+                </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
 
-                </RelativeLayout>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:cardview="http://schemas.android.com/apk/res-auto"
-            android:layout_width="300sp"
-            android:focusable="true"
-            android:clickable="true"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            app:cardBackgroundColor="#4fc3f7"
-            app:cardElevation="0dp"
-            cardview:cardCornerRadius="90dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerInParent="true"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerInParent="true"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        app:cardBackgroundColor="#FFFFFF"
-                        app:cardElevation="0dp"
-                        cardview:cardCornerRadius="90dp">
-
-                        <ImageView
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:padding="5dp"
-                            android:src="@drawable/ic_twitter" />
-                    </androidx.cardview.widget.CardView>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:gravity="center"
-                            android:text="เข้าสู่ระบบด้วย Twitter"
-                            android:textColor="#FFFFFF"
-                            android:textSize="17dp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
-
-
-                </RelativeLayout>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -244,17 +166,29 @@
                 android:layout_height="0.5sp"
                 android:layout_weight="1"
                 android:background="@color/colorGray">
-
             </View>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginLeft="15dp"
+            <LinearLayout
                 android:layout_marginRight="15dp"
-                android:gravity="center"
-                android:text="หรือเลือกวิธีต่อไปนี้เข้าสู่ระบบ"
-                android:textSize="15dp" />
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="หากมีบัญชีอยู่แล้ว?"
+                    android:textSize="15dp" />
+                <TextView
+                 android:layout_marginLeft="10dp"
+                    android:id="@+id/btn_mstory"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="เข้าสู่ระบบ"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
             <View
                 android:layout_width="0dp"
@@ -265,43 +199,10 @@
             </View>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:cardview="http://schemas.android.com/apk/res-auto"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
 
-                app:cardBackgroundColor="#EEEEEE"
-                app:cardElevation="0dp"
-                cardview:cardCornerRadius="90dp">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:padding="15dp"
-                    android:src="@drawable/ic_phone">
-
-                </ImageView>
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:gravity="center"
-                android:text="sms"
-                android:textSize="15dp">
-
-            </TextView>
-        </LinearLayout>
     <LinearLayout
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
@@ -316,6 +217,7 @@
         </CheckBox>
 
     <LinearLayout
+
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:gravity="center"

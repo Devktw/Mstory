@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="?colorPrimary"/>
+    </item>
+    <item android:gravity="center"
+        android:width="70dp"
+        android:height="70dp">
+        <bitmap
+            android:src="@drawable/ic_mstory_round"
+            android:gravity="fill_horizontal|fill_vertical"/>
+    </item>
+
+</layer-list>

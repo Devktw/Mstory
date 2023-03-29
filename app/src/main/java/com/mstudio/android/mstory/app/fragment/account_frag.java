@@ -1,21 +1,31 @@
 package com.mstudio.android.mstory.app.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,13 +52,16 @@ public class account_frag extends Fragment {
 
     private int[] tabIcons = {
             R.drawable.ic_listprofile,
-            R.drawable.ic_like,
+            R.drawable.ic_like_false,
 
     };
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         final View view = inflater.inflate(R.layout.account_frag, container, false);
+
         profile = view.findViewById(R.id.image_account);
         username = view.findViewById(R.id.username);
         tabLayout=view.findViewById(R.id.tablayout);
@@ -86,6 +99,8 @@ public class account_frag extends Fragment {
         }
         return view;
     }
+
+
     public static class SectionPagerAdapter extends FragmentPagerAdapter {
 
         private List<Fragment> fragmentList = new ArrayList<>();

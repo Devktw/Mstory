@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_bottom_post"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <LinearLayout android:orientation="vertical"
+        android:background="@drawable/rounded_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:layout_marginTop="10dp"
+            android:background="@drawable/bottom_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+        <LinearLayout android:id="@+id/logout"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_singout"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:tint="@color/colorAccent">
+
+            </ImageView>
+            <TextView
+                android:textColor="@color/red"
+                android:layout_marginLeft="5dp"
+                android:textSize="17dp"
+                android:text="ออกจากระบบ"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

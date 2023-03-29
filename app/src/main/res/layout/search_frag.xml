@@ -1,38 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".search_frag">
-
+   >
     <RelativeLayout android:id="@+id/bar"
         android:paddingRight="5dp"
         android:paddingLeft="5dp"
-        android:elevation="5dp"
         android:background="@color/colorPrimary"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
 
-        <RelativeLayout
+        <LinearLayout
             android:orientation="horizontal"
             android:background="@color/colorPrimary"
-            android:layout_centerInParent="true"
             android:gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp">
-            <TextView android:text="Mstory"
-                android:id="@+id/searchtext"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:layout_centerInParent="true"
-                android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image_account"
+                android:layout_alignParentLeft="true"
+                android:padding="7dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:src="@drawable/profile_null" />
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/go_search"
                 android:layout_marginLeft="15dp"
-                android:gravity="center_vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </RelativeLayout>
+                android:layout_marginRight="15dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                app:cardBackgroundColor="#EEEEEE"
+                app:cardElevation="0dp"
+                cardview:cardCornerRadius="90dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="ค้นหาผู้คน"
+                        android:textColor="@color/tint_post"
+                        android:textSize="15dp"></TextView>
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/search_true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        cardview:tint="@color/tint_post">
+                    </ImageView>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/menu_post"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="90dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_menu">
+                    </ImageView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+    </LinearLayout>
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorGray"
+            android:layout_width="match_parent"
+            android:layout_height="0.1sp">
+        </View>
     </RelativeLayout>
-
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
